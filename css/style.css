@@ -16,7 +16,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "PT Sans", Tahoma, Verdana, sans-serif;
+  font-family: "PT Sans", Tahoma, Verdana, sans-serif; /**********************************************/
 }
 html,
 body {
@@ -374,7 +374,7 @@ a {
 }
 .fr-copyright-footer .fr-made-with-froont {
   width: auto;
-  font-family: Arial;
+  font-family: Arial; /**************************************************************************************/
   font-size: .55rem;
   text-align: center;
   letter-spacing: .14rem;
@@ -529,7 +529,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   float: none;
   display: block;
   width: 90%;
-  font-family: Karla;
+  font-family: 'Raleway', sans-serif; /***************************************************************************************/
   font-weight: 200;
   font-size: 1.2em;
   line-height: 1.45em;
@@ -550,7 +550,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
 .fr_denime {
   display: block;
   width: 200px;
-  font-family: Karla;
+  font-family: 'Raleway', sans-serif; /***************************************************************************************/
   font-weight: 400;
   font-size: 1.15em;
   text-align: center;
@@ -572,7 +572,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   float: none;
   display: block;
   width: 100%;
-  font-family: Karla;
+  font-family: 'Raleway', sans-serif;/***************************************************************************************/
   font-weight: 700;
   font-size: 2.9em;
   line-height: 1.05em;
@@ -879,7 +879,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   float: none;
   display: block;
   width: 90%;
-  font-family: Karla;
+  font-family: 'Raleway', sans-serif;/***************************************************************************************/
   font-weight: 400;
   font-size: .85em;
   line-height: 1.7em;
@@ -944,7 +944,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   overflow: hidden
 }
 .fr_navigation_link {
-  font-family: europa;
+  font-family: 'Lato', sans-serif;/***************************************************************************************/
   font-weight: 300;
   font-size: 1.1em;
   line-height: 1.35em;
@@ -1048,7 +1048,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   position: relative
 }
 .fr_h2_center_white {
-  font-family: europa;
+  font-family: 'Lato', sans-serif;/***************************************************************************************/
   font-weight: 100;
   font-size: 1.7em;
   line-height: 1.45em;
@@ -1082,7 +1082,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   float: none;
   display: block;
   width: 90%;
-  font-family: europa;
+  font-family: 'Lato', sans-serif;/***************************************************************************************/
   font-weight: 300;
   font-size: .8em;
   line-height: 1.4em;
@@ -1175,7 +1175,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   float: none;
   display: block;
   width: 90%;
-  font-family: europa;
+  font-family: 'Lato', sans-serif;/***************************************************************************************/
   font-weight: 300;
   font-size: .8em;
   line-height: 1.4em;
@@ -1190,7 +1190,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   min-width: 100%
 }
 .fr_cnt04_main_title {
-  font-family: europa;
+  font-family: 'Lato', sans-serif;/***************************************************************************************/
   font-weight: 300;
   font-size: 3.55em;
   text-align: center;
@@ -1201,7 +1201,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   float: none;
   display: block;
   width: 90%;
-  font-family: europa;
+  font-family: 'Lato', sans-serif;/***************************************************************************************/
   font-weight: 300;
   font-size: .8em;
   line-height: 1.4em;
@@ -1268,7 +1268,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   margin-left: auto
 }
 .fr_h2_left_black_bold {
-  font-family: europa;
+  font-family: 'Lato', sans-serif;/***************************************************************************************/
   font-weight: 900;
   font-size: 1.7em;
   line-height: 1.45em;
@@ -1298,7 +1298,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   display: block
 }
 .fr_paragraph_left_grey {
-  font-family: europa;
+  font-family: 'Lato', sans-serif;/***************************************************************************************/
   font-weight: 300;
   font-size: 1.1em;
   line-height: 1.4em;
@@ -1359,7 +1359,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   min-width: 100%
 }
 .fr_h2_left_black {
-  font-family: europa;
+  font-family: 'Lato', sans-serif;/***************************************************************************************/
   font-weight: 300;
   font-size: 1.7em;
   line-height: 1.45em;
@@ -1368,7 +1368,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   color: #292c31
 }
 .fr_paragraph_left_black {
-  font-family: europa;
+  font-family: 'Lato', sans-serif;/***************************************************************************************/
   font-weight: 300;
   font-size: 1.1em;
   line-height: 1.4em;
@@ -1425,7 +1425,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   margin-left: auto
 }
 .fr_paragraph_center_black {
-  font-family: europa;
+  font-family: 'Lato', sans-serif;/***************************************************************************************/
   font-weight: 300;
   font-size: 1.1em;
   line-height: 1.4;
@@ -1437,7 +1437,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   display: block
 }
 .fr_h2_black_center {
-  font-family: europa;
+  font-family: 'Lato', sans-serif;/***************************************************************************************/
   font-weight: 900;
   font-size: 1.7em;
   line-height: 1.3em;
@@ -1574,7 +1574,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   max-width: 230px
 }
 .fr_h2_left_white {
-  font-family: europa;
+  font-family: 'Lato', sans-serif;/***************************************************************************************/
   font-weight: 300;
   font-size: 1.7em;
   line-height: 1.45em;
@@ -1607,7 +1607,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   min-width: 100%
 }
 .fr_h4_white {
-  font-family: europa;
+  font-family: 'Lato', sans-serif;/***************************************************************************************/
   font-weight: 600;
   font-size: 1.7em;
   line-height: 1.45em;
@@ -1881,7 +1881,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
 .fr_paragraph_center_3 {
   float: none;
   display: block;
-  font-family: Oxygen;
+  font-family: 'Raleway', sans-serif;/***************************************************************************************/
   font-weight: 400;
   font-size: 1em;
   line-height: 1.35em;
@@ -1899,7 +1899,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
 .fr_header_center {
   float: none;
   display: block;
-  font-family: Oxygen;
+  font-family: 'Raleway', sans-serif;/***************************************************************************************/
   font-weight: 300;
   font-size: 2em;
   line-height: 1.35em;
@@ -1925,7 +1925,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
 .fr_header_center_2 {
   float: none;
   display: block;
-  font-family: Oxygen;
+  font-family: 'Raleway', sans-serif;/***************************************************************************************/
   font-weight: 300;
   font-size: 2em;
   line-height: 1.35em;
@@ -1937,7 +1937,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
 .fr_paragraph_center_4 {
   float: none;
   display: block;
-  font-family: Oxygen;
+  font-family: 'Raleway', sans-serif;/***************************************************************************************/
   font-weight: 400;
   font-size: 1em;
   line-height: 1.35em;
@@ -1989,7 +1989,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   max-width: inherit
 }
 .fr_bf_link {
-  font-family: futura-pt;
+  font-family: futura-pt;/***************************************************************************************/
   font-weight: 200;
   font-size: 1.1em;
   text-align: left;
@@ -2012,7 +2012,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   max-width: 25em
 }
 .fr_h2_left_white-1 {
-  font-family: europa;
+  font-family: 'Lato', sans-serif;/***************************************************************************************/
   font-weight: 300;
   font-size: 1.7em;
   line-height: 1.45em;
@@ -2032,7 +2032,7 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
   min-width: 100%
 }
 .fr_paragraph_left_white {
-  font-family: europa;
+  font-family: 'Lato', sans-serif;/***************************************************************************************/
   font-weight: 300;
   font-size: 1.1em;
   line-height: 1.4em;
@@ -2497,3 +2497,109 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
 /** ******************************** **/
 /** End of widget styles             **/
 /** ******************************** **/
+
+/* Fixes */
+
+.fr_gry4_4_column_grid {
+  margin-top: 0;
+}
+
+  .fr_gry4_main_title {
+    max-width: 600px;
+    display: block;
+    float: none;
+    margin: 20px auto;
+  }
+
+.fr_gry4_4_column_grid {
+  float: none;
+  display: block;
+  width: 90%;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  padding-top: 1px;
+  max-width: 1200px;
+}
+
+.fa {
+  font-size: 100px;
+}
+
+.fa-street-view, .fa-comments-o, .fa-smile-o, .fa-thumbs-o-up {
+  margin-left: 33%;
+  margin-top: 26%;
+}
+
+.fr_gry4_image_one, .fr_gry4_image_two, .fr_gry4_image_three, .fr_gry4_image_four {
+  border-radius: 50%;
+}
+
+.white {
+  color: white;
+}
+
+.fr_header_center {
+  font-size: 40px;
+}
+
+.fr-text h1 {
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.fr_paragraph_center_black, .fr_bf_paragraph_one, .fr_bf_paragraph_two, .fr_bf_paragraph_three, .fr_paragraph_left_grey, .fr_h2_left_white {
+  font-size: 1rem;
+}
+.fr_h2_left_white {
+  font-weight: 100;
+  font-size: 1.7em;
+  line-height: 1.45em;
+}
+
+h2.subtitle {
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.45em;
+  margin-top: 20px;
+}
+
+.fr_denime {
+  border-radius: 1em;
+  margin:auto;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.button {
+  margin-top: 30px;
+}
+
+#nous_rejoindre {
+  background-color: #57CBF4;
+  margin-top: -6px;
+}
+
+.b-content {
+  padding-bottom: 0;
+}
+
+#footer {
+  padding: 20px;
+  font-size: 12px;
+}
+
+
+@media (max-width: 640px) {
+  #fr_544a3559d775ef3dd0000038 {
+    display: none;
+  }
+
+  #fr_54450714d775ef4cd100001b {
+    padding-top: 30px;
+  }
+}
+
+#fr_54450885d775ef4cd100002b.fr_denime {
+  margin-left: 0;
+}
