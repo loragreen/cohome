@@ -2603,3 +2603,22 @@ h2.subtitle {
 #fr_54450885d775ef4cd100002b.fr_denime {
   margin-left: 0;
 }
+
+.form-horizontal {
+  padding: 20px;
+  border: 0;
+  text-align: center;
+}
+
+.form-horizontal label {
+  font-size: 1.2em;
+  font-weight: 100;
+}
+
+.form-group {
+  margin-bottom: 26px;
+}
+
+#mc-embedded-subscribe {
+  border: 0;
+}
