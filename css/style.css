@@ -2523,16 +2523,20 @@ body.isTouchDevice .fr-widget.fr-background-parallax,
 }
 
 .fa {
-  font-size: 100px;
+  font-size: 60px;
 }
 
 .fa-street-view, .fa-comments-o, .fa-smile-o, .fa-thumbs-o-up {
-  margin-left: 33%;
-  margin-top: 26%;
+  margin-left: 35%;
+  margin-top: 29%;
 }
 
 .fr_gry4_image_one, .fr_gry4_image_two, .fr_gry4_image_three, .fr_gry4_image_four {
   border-radius: 50%;
+  min-height: 150px;
+  min-width: 150px;
+  max-height: 150px;
+  max-width: 150px
 }
 
 .white {
@@ -2600,7 +2604,7 @@ h2.subtitle {
   }
 }
 
-#fr_54450885d775ef4cd100002b.fr_denime {
+#fr_54450885d775ef4cd100002b.fr_denime, #fr_54450885d775ef4cd100002b3.fr_denime {
   margin-left: 0;
 }
 
@@ -2621,4 +2625,9 @@ h2.subtitle {
 
 #mc-embedded-subscribe {
   border: 0;
+}
+
+.fr_paragraph_left_grey {
+  color: #DDD;
+  padding-top: 18px;
 }

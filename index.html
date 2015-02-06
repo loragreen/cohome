@@ -36,7 +36,14 @@
 
   <script type="text/javascript" src="vendor/bower/jquery/jquery.js"></script>
   <script type="text/javascript" src="js/backend/jquery-extends/live-patch.js"></script>
+  <script type="text/javascript" src="js/export/form-submit.js"></script>
+  <script type="text/javascript" src="vendor/bower/waypoints/lib/noframework.waypoints.js"></script>
   <script type="text/javascript" src="vendor/bower/responsive-nav/responsive-nav.min.js"></script>
+  <script type="text/javascript" src="js/export/reveal-animation.js"></script>
+  <script type="text/javascript" src="js/export/background-parallax.js"></script>
+  <script type="text/javascript" src="vendor/bower/swiper/dist/idangerous.swiper.js"></script>
+  <script type="text/javascript" src="js/export/page-script.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
   
 
   <meta http-equiv="content-language" content="en">
@@ -101,15 +108,18 @@
                 <a id="fr_54450885d775ef4cd100002b" data-mode="1" class="typeform-share fr-widget fr-text fr-wf    fr_denime
           
            fr-link            " href="https://cline1.typeform.com/to/Kssjl6">
-                  <div class="fr-text">Je veux devenir hôte</div>
+                  <div class="fr-text" id="cohomerButton">Je veux être Cohomer</div>
+                  <div class="fr-text" style="display:none;" id="cohomerButtonTranslation">Je veux être hôte</div>
+
 
                 </a>
               </div>
               <div class="col-sm-6">
-                 <a id="fr_54450885d775ef4cd100002b" class="fr-widget fr-text fr-wf    fr_denime
+                 <a id="fr_54450885d775ef4cd100002b3" class="fr-widget fr-text fr-wf    fr_denime
             
             fr-link            " data-toggle="modal" data-target="#myModal">
-                   <div class="fr-text">Je veux devenir visiteur</div>
+                   <div class="fr-text" id="coworkerButton">Je veux être Coworker</div>
+                   <div class="fr-text" style="display:none;" id="coworkerButtonTranslation">Je veux être visiteur</div>
 
                  </a>
                 
@@ -186,18 +196,18 @@
         </a>
 
 
-        <a id="fr_54d1ffcf4384617a61000263" class="fr-widget fr-text fr-wf    fr_navigation_link fr_link_4
+<!--         <a id="fr_54d1ffcf4384617a61000263" class="fr-widget fr-text fr-wf    fr_navigation_link fr_link_4
      fr-widget-hover-opacity-60
      fr-link            " href="#carte">
           <div class="fr-text">Carte</div>
 
-        </a>
+        </a> -->
 
 
         <a id="fr_54d2108c4384617a61000269" class="fr-widget fr-text fr-wf    fr_navigation_link fr_link_5
      fr-widget-hover-opacity-60
      fr-link            " href="#nous_rejoindre">
-          <div class="fr-text">Nous rejoindre</div>
+          <div class="fr-text">Devenir hôte</div>
 
         </a>
 
@@ -238,7 +248,12 @@
                 <span style="letter-spacing: 0.01em; line-height: 1.4;">Notre communauté est constituée de personnes de confiance. Elles vous accueillent dans leur appartement pour travailler ensemble et échanger des bonnes pratiques.</span>
               </div>
               <div class="button">
-                <a href="#carte" class="fr_denime">Carte des participants</a>
+               <a id="" class="fr-widget fr-text fr-wf    fr_denime
+          
+          fr-link            " data-toggle="modal" data-target="#myModal">
+                 <div class="fr-text">Je veux devenir Coworker</div>
+
+               </a>
               </div>
             </div>
 
@@ -259,7 +274,12 @@
               </div>
               <div>Cohome vous permet d'inviter des professionnels dans leur domaine, chez vous, et de travailler avec eux.</div>
               <div class="button">
-                <a href="#nous_rejoindre" class="fr_denime">Devenir Cohomer</a>
+                 <a id="" data-mode="1" class="typeform-share fr-widget fr-text fr-wf    fr_denime
+            
+            fr-link            " href="https://cline1.typeform.com/to/Kssjl6">
+                   <div class="fr-text">Je veux devenir Cohomer</div>
+
+                 </a>
               </div>
             </div>
 
@@ -607,8 +627,7 @@
             <div id="fr_54d1fcff4384617a61000238" class="fr-widget fr-text fr-wf    fr_paragraph_left_grey fr_gry4_paragraph_one
     
                 ">
-              <div class="fr-text">Découvrez la liste de nos Cohomers sur la carte. Regardez leurs disponibilités grâce à leur calendrier individuel.
-                <div>Vous pouvez aussi regarder, sur le groupe Facebook, les avis sur les cohomers.</div>
+              <div class="fr-text">Rejoignez-nous et regardez les offres de nos Cohomers sur le <a href="https://www.facebook.com/groups/760907487298386/" target="_blank">groupe Facebook</a>.
               </div>
 
             </div>
@@ -741,10 +760,10 @@
     <!-- fonctionnement fin -->
 
 
-    <div id="carte" class="fr-widget fr-container    fr_text_block_center
+    <!-- <div id="carte" class="fr-widget fr-container    fr_text_block_center -->
     
-                ">
-      <div id="fr_54d21a3e4384617a6100029a" class="fr-widget fr-text fr-wf    fr_header_center
+                <!-- "> -->
+<!--       <div id="fr_54d21a3e4384617a6100029a" class="fr-widget fr-text fr-wf    fr_header_center
     
                 ">
         <div class="fr-text"><h1>Communauté Cohome</h1></div>
@@ -767,9 +786,9 @@
     <div id="fr_54d216a24384617a61000291" class="fr-widget fr-html fr-wf    fr_html
     
                 ">
-      <iframe src="https://www.google.com/maps/d/embed?mid=zNeKzv498Alo.kOjY371oNc2s" width="100%" height="480"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d84192.6312717457!2d2.2950080653320493!3d48.74331994089221!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1423227596840" width="100%" height="450" frameborder="0" style="border:0"></iframe>
 
-    </div>
+    </div> -->
 
     <section id="nous_rejoindre">
       <div id="" class="fr-widget fr-container    fr_text_block_center_2
@@ -831,7 +850,7 @@
           <div id="fr_54d223d64384617a610002d1" class="fr-widget fr-text fr-wf    fr_paragraph_left_white fr_f4_paragraph
     
                 ">
-            <div class="fr-text">L'idée de Cohome est née il y a quelques semaines en parlant avec un ami indépendant. Notre communauté est naissante et n'attend que vous !
+            <div class="fr-text">L'idée de Cohome est née il y a quelques semaines du désir de travailler avec d'autres personnes. Notre communauté est naissante et n'attend que vous !
               <div>Un application sera disponible quand la communauté aura grandi. En attendant, rejoignez-nous sur Facebook !</div>
             </div>
 
