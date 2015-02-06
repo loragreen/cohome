@@ -3,12 +3,16 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="content-language" content="en">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--[if lt IE 9]>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
                     <script type="text/javascript" src="vendor/bower/html5shiv/dist/html5shiv.js"></script>
             <![endif]-->
   <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
   <title>Cohome - Coworking at Home</title>
+  <meta name="description" content="Cohome vous permet de travailler avec d'autres personnes dans leur appartement en toute confiance. Rejoignez notre communauté d'indépendants !"> 
   <meta name="DC.title" content="Cohome - Coworking at Home">
   <meta name="og:title" content="Cohome - Coworking at Home">
   <meta name="og:image" content="https://froont.com/cms/2xqi22/_screenshots/images/thumbnail/1700_1423059256.png_1500x1500.jpeg">
@@ -46,9 +50,11 @@
   <script type="text/javascript" src="js/custom.js"></script>
   
 
-  <meta http-equiv="content-language" content="en">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- Optimizely -->
+  <script src="//cdn.optimizely.com/js/2413281348.js"></script>
+
 </head>
 
 <body>
@@ -916,43 +922,6 @@
 
 
   </div>
-  <div id="footer-assets">
-    <!--[if lt IE 9]>
-                    <script type="text/javascript" src="vendor/bower/respond/respond.src.js"></script>
-                    <script type="text/javascript" src="vendor/bower/raphael/raphael.js"></script>
-                    <script type="text/javascript" src="vendor/bower/raphael-svg-import-classic/raphael-svg-import.js"></script>
-                    <script type="text/javascript" src="js/raphaelize.js"></script>
-            <![endif]-->
-
-      <!-- Latest compiled and minified JavaScript -->
-      <script src="bootstrap/js/bootstrap.min.js"></script>
-      <script>
-        (function() {
-          var qs, js, q, s, d = document,
-            gi = d.getElementById,
-            ce = d.createElement,
-            gt = d.getElementsByTagName,
-            id = 'typef_orm',
-            b = 'https://s3-eu-west-1.amazonaws.com/share.typeform.com/';
-          if (!gi.call(d, id)) {
-            js = ce.call(d, 'script');
-            js.id = id;
-            js.src = b + 'share.js';
-            q = gt.call(d, 'script')[0];
-            q.parentNode.insertBefore(js, q)
-          }
-          id = id + '_';
-          if (!gi.call(d, id)) {
-            qs = ce.call(d, 'link');
-            qs.rel = 'stylesheet';
-            qs.id = id;
-            qs.href = b + 'share-button.css';
-            s = gt.call(d, 'head')[0];
-            s.appendChild(qs, s)
-          }
-        })()
-      </script>
-  </div>
 
 
       <!-- BEGINNING Modal -->
@@ -1002,6 +971,58 @@
       <!-- END MODAL -->
 
 
+  <div id="footer-assets">
+    <!--[if lt IE 9]>
+                    <script type="text/javascript" src="vendor/bower/respond/respond.src.js"></script>
+                    <script type="text/javascript" src="vendor/bower/raphael/raphael.js"></script>
+                    <script type="text/javascript" src="vendor/bower/raphael-svg-import-classic/raphael-svg-import.js"></script>
+                    <script type="text/javascript" src="js/raphaelize.js"></script>
+            <![endif]-->
+
+      <!-- Latest compiled and minified JavaScript for Bootstrap -->
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+
+      <!-- Typeform -->
+      <script>
+        (function() {
+          var qs, js, q, s, d = document,
+            gi = d.getElementById,
+            ce = d.createElement,
+            gt = d.getElementsByTagName,
+            id = 'typef_orm',
+            b = 'https://s3-eu-west-1.amazonaws.com/share.typeform.com/';
+          if (!gi.call(d, id)) {
+            js = ce.call(d, 'script');
+            js.id = id;
+            js.src = b + 'share.js';
+            q = gt.call(d, 'script')[0];
+            q.parentNode.insertBefore(js, q)
+          }
+          id = id + '_';
+          if (!gi.call(d, id)) {
+            qs = ce.call(d, 'link');
+            qs.rel = 'stylesheet';
+            qs.id = id;
+            qs.href = b + 'share-button.css';
+            s = gt.call(d, 'head')[0];
+            s.appendChild(qs, s)
+          }
+        })()
+      </script>
+
+      <!-- Google Analytics -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-59464719-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+
+  </div>
 
 </body>
 
