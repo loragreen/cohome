@@ -1,0 +1,88 @@
+/*=====================================================================================
+	COMMENTS
+=======================================================================================*/
+
+#content > #disqus_thread { max-width: 600px; margin: 0 auto; clear: both; padding: 40px 75px; }
+
+#comments { background: rgba(200,194,202,0.05); border-top: 1px solid rgba(200,194,202,0.3); clear: both;
+	.inner {
+		h3 { margin-bottom: 30px; font-weight: normal; font-size: 28px; }
+	}
+	#comments-list { line-height: 22px; font-size: 14px; color: #888888; margin-bottom: 50px;
+		li { padding-bottom: 30px; margin-bottom: 30px; position: relative;
+			&:after { .x(50px, 0); content: ''; display: block; position: absolute; bottom: 0; border-top: 1px solid rgba(0,0,0,0.1); }
+			&.parent { padding-bottom: 0;
+				&:after { display: none; }
+			}
+			.comment-body {
+				p, ul, ol, blockquote { margin-bottom: 10px; }
+				a, a:visited { color: @accent; 
+					&:hover { color: darken(@accent, 10%); }
+				}
+				ul, ol { padding-left: 50px; line-height: 22px; font-size: inherit; font: inherit; margin-bottom: 5px; 
+					ul, ol { margin-bottom: 0; }
+					li { padding-bottom: 0; margin-bottom: 0; 
+						&:after { display: none; }
+					}
+				}
+				ul { list-style: disc; 
+					ul { list-style: circle; }
+				}
+				ol { list-style: decimal; 
+					ol { list-style: lower-alpha; }
+				}
+			}
+			footer { font-family: @serif; font-style: italic; height: 24px; line-height: 28px; padding-top: 5px; 
+				&:after { .cl; }
+				.author { .left; color: @dark; line-height: 24px;
+					a, a:visited { color: @accent; 
+						&:hover { color: darken(@accent, 10%); text-decoration: underline; }
+					}
+					img { vertical-align: top; display: inline-block; margin-right: 5px; .br(12px); }
+				}
+				
+				.right {
+					a { color: inherit; .transition(color 0.15s ease-in-out); color: @light;
+						&:hover { text-decoration: underline; color: darken(@light, 25%); }
+					}
+					span { display: inline-block; padding: 0 10px; .opacity(0.5); font-size: 10px; }
+				}
+			}
+			.comment-respond { padding-left: 75px; padding-top: 10px; background: url('@{p}ico-reply.svg') 24px 14px no-repeat; margin-bottom: 0;
+				h3 { font-size: 20px; margin-bottom: 5px; 
+					small { font-family: @sansserif; }
+				}
+			}
+			> ol, > ul { padding-top: 30px;
+				> li { padding-left: 75px; background: url('@{p}ico-reply.svg') 24px 14px no-repeat; 
+					&:last-child { margin-bottom: 0; }
+				}
+			}
+		}
+	}
+}
+
+#commentform {
+	p { margin-bottom: -1px;
+		label { display: none; }
+		input[type=text], input[type=url], input[type=email], textarea { .br(0); position: relative;
+			&:focus { z-index: 2; }
+		}
+		&.field {
+			&:first-child {
+				input, textarea { .brall(4px, 0, 0, 4px); }
+			}
+			&.textarea { margin-bottom: 10px;
+				textarea { .brall(0, 4px, 4px, 0); }
+			}
+		}
+		&.logged-in-as { .small; margin-bottom: 10px; 
+			&~ .textarea {
+				textarea { .brall(4px, 4px, 4px, 4px); }
+			}
+		}
+	}
+	input[type=submit] { .btn; .btn-accent; }
+}
+
+.info { text-align: center; font-size: 20px; color: @light; padding: 20px 0; letter-spacing: 2px; }

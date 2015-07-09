@@ -1,0 +1,456 @@
+// To convert into CSS minifying it: `sass --watch scss/style.scss:css/main.css --style compressed`
+
+/* ==========================================================================
+   Calls
+   ========================================================================== */
+
+@import 'bootstrap';
+//@import 'bootstrap-theme';
+@import 'variables';
+
+/* ==========================================================================
+   Global
+   ========================================================================== */
+
+   body {
+    font-family: $main-font;
+   }
+
+   .bold {
+    font-weight: bold;
+   }
+
+   .thumbnail {
+       display: block;
+       padding: 0px;
+       margin-bottom: 20px;
+       line-height: 1.42857;
+       background-color: #FFF;
+       border: 0px solid #DDD;
+       border-radius: 0px;
+       transition: 0;
+   }
+
+   .right-column .post img, .right-column .page img, .right-column .attachment img {
+       border-radius: 0px;
+   }
+
+   .nav-trigger {
+    box-sizing: content-box;
+   }
+
+   .clear-padding {
+    padding: 0;
+   }
+
+   a, a:visited {
+     color: $links-color;
+     opacity: 1;
+     //text-decoration: none;
+     //font: inherit;
+     @include transition(all, 0.3s, ease-out);
+   }
+
+  a:hover, a:focus {
+    color: $links-color;
+    //opacity: 0.8;
+    //text-decoration: underline;
+    .btn, button[type="submit"], input[type="button"], input[type="reset"], input[type="submit"] {
+      background-color: $blue;
+      color: white;
+      //border: 1px solid $blue;
+    }
+  }
+
+
+
+  .btn, button[type="submit"], input[type="button"], input[type="reset"], input[type="submit"] {
+    height: 30px;
+    line-height: 10px;
+    margin: 0 5px;
+    text-shadow: 0 0 white;
+    background-color: $orange;
+    color: white;
+    border: 1px solid $orange;
+    @include transition(all, 0.3s, ease-out);
+    &:hover {
+      background-color: $blue;
+      color: white;
+      border: 1px solid $blue;
+    }
+  }
+
+  input[type="text"], input[type="search"], input[type="date"], input[type="time"], input[type="password"], input[type="email"], input[type="url"], input[type="phone"], textarea, input[type="number"] {
+    height: 40px;
+    width: 100%;
+    padding: 9px 20px;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: all 0.15s ease-in-out 0s;
+    background: rgba(255, 255, 255, 0.7) none repeat scroll 0% 0%;
+    margin: 0px;
+  }
+
+  .btn.btn-default:hover {
+    background-color: $blue;
+    color: white;
+    border: 1px solid $blue;
+  }
+
+  .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
+    color: inherit;
+    background-color: inherit;
+    border-color: inherit;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: $orange;
+  }
+
+   /* ==========================================================================
+   Home
+   ========================================================================== */
+/*
+   .home-top {
+      .image-wrapper {
+        height: 198px;
+        overflow: hidden;
+        position: relative;
+        img {
+          max-width: auto;
+          width: auto;
+          @media (min-width: $screen-sm) {
+            height: 100%;
+          }
+        }
+        .title {
+          position: absolute;
+          top: 0;
+          left: 0px;
+          text-align: center;
+          width: 100%;
+          background-color: rgb(1,1,1);
+          background-color: rgba(1,1,1, 0.4);
+          height: 100%;
+          margin-top: 0;
+          padding-top: 29%;
+          font-size: 21px;
+          color: white;
+          @include transition(all, 0.5s, ease-out);
+          @media (max-width: $screen-sm) {
+            padding-top: 14%;
+          }
+          &:hover {
+            background-color: transparent;
+            color: $blue;
+            //text-shadow: 0 0 10px white;
+          }
+        }
+      }
+   }
+*/
+   .home {
+    #main .right-column {
+      @media (min-width: $screen-lg) {
+            padding-left: 37%;
+      }
+
+      h2 {
+        @media (max-width: $screen-sm) {
+          margin: 50px 30px;
+        }
+        @media (min-width: $screen-sm) {
+          margin: 50px 0 30px 0;
+        }
+      }
+      .inner {
+        @extend .clear-padding;
+      }
+      #home-posts {
+        margin-top: 50px;
+        #articles-title {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+        .filters {
+          text-align: center;
+          margin-bottom: 25px;
+          .filter-button {
+            &.selected {
+              background-color: $blue;
+              color: white;
+              border: 1px solid $blue;
+            }
+          }
+        }
+      }
+      #grid {
+        margin-top: 20px;
+        @media (max-width: $screen-sm) {
+          .grid-item {
+            width: 100%;
+          }
+        }
+      }
+      // Articles thumbnails
+      article {
+        header {
+          position: relative;
+          .thumbnail_wrapper {
+            position: absolute;
+            width: 100%;
+            background-color: rgb(255,255,255);
+            background-color: rgba(255,255,255, 0.2);
+            margin: 0;
+            height: 100%;
+            padding-top: 20%;
+            z-index: 1;
+            @include transition(all, 0.5s, ease-out);
+          }
+          h3 {
+            text-align: center;
+            background-color: rgb(1,1,1);
+            background-color: rgba(1,1,1, 0.8);
+            padding: 5% 5% 5% 5%;
+            font-size: 22px;
+            color: white;
+            @include transition(all, 0.5s, ease-out);
+          }
+          a:hover h2{
+                background-color: rgb(255,255,255);
+                background-color: rgba(255,255,255, 0.8);
+                color: $titles-color;
+                //text-shadow: 0 0 10px white;
+                opacity: 1;
+          }
+          a:hover .thumbnail_wrapper {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+   }
+
+   .post_thumbnail .wp-post-image {
+    @include filter(brightness, 100%);
+   }
+
+   #about {
+    background-position: 50% 0px;
+   }
+
+// Presentation section
+.icons-boxes {
+  p {
+    margin: 0;
+    padding: 5px 0;
+  }
+  header {
+    text-align: center;
+    margin-bottom: -40px;
+    .icon {
+      border-radius: 50%;
+      overflow: hidden;
+      display: inline-block;
+      border: 1px solid #d9d4d2;
+      .fa {
+        color: black;
+        background-color: white;
+        padding: 20px;
+        font-size: 30px;
+        border-radius: 50%;
+      }
+    }
+  }
+  .content {
+    padding: 27px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #d9d4d2;
+    border-radius: 3px;
+    h3 {
+      padding: 22px 0 20px 0;
+      margin: 0;
+    }
+  }
+  .btn-info {
+    color: black;
+    background-color: #f3f3f3;
+    border-color: #f3f3f3;
+  }
+  .more {
+    padding-top: 30px;
+  }
+}
+
+.join-button {
+  margin: 40px auto;
+  text-align: center;
+  button {
+    font-size: 18px;
+    padding: 22px;
+    line-height: 0;
+  }
+}
+
+// Sidebar
+
+#main .left-column {
+  font-size: 20px;
+}
+
+#details {
+  padding-bottom: 29%;
+  vertical-align: bottom;
+  .profile {
+      .avatar {
+        margin-bottom: 0;
+      }
+      h1, h2 {
+        font-size: 2em;
+        margin-top: 40px;
+        margin-bottom: 10px;
+      }
+      p.subtitle {
+        padding: 10px 0px;
+        margin: 0px auto;
+        font-size: 1.1em;
+      }
+  }
+  // Responsive
+  @media (max-width: $screen-sm) {
+    .menu-sidebar-menu-container {
+      display: none;
+    }
+    .social ul {
+      margin-bottom: 0;
+    }
+  }
+
+  .newsletter a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8em;
+  }
+}
+
+// To be moved
+.last {
+  border: 1px solid $orange;
+}
+
+// Modale
+body.modal-open {
+  margin-right: -15px;
+}
+.modal {
+  background-color: rgb(1,1,1);
+  background-color: rgba(1,1,1, 0.5);
+  .modal-dialog {
+    //margin-top: 10%;
+  }
+}
+
+#menu-sidebar-menu {
+  padding: 30px 30px 0px;
+  margin-top: 30px;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  li {
+    padding: 0;
+  }
+  a {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.8em;
+  }
+  &:before {
+    width:50px;
+    height:0;
+    content:'';
+    display:block;
+    top:0;
+    position:absolute;
+    left:50%;
+    margin-left:-25px;
+    border-top:2px solid rgba(255,255,255,0.5);
+    box-shadow:0 1px 1px rgba(0,0,0,0.05);
+  }
+}
+
+// Posts
+.single #content {
+  word-wrap: break-word;
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.01rem;
+  font-weight: 300;
+  font-style: normal;
+  h1 {
+    margin-bottom: 70px;
+  }
+}
+
+// Members private profiles
+.post-body {
+  position: relative;
+  .post-content {
+    //@include filter_content(blur, 5px);
+    @include filter(blur, 5px);
+  }
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    padding-top: 15%;
+    text-align: center;
+    p {
+      margin-bottom: 30px;
+    }
+    .big {
+      font-size: 1.7em;
+    }
+    .signup {
+      margin-top: 7%;
+      .btn {
+        font-size: 20px;
+        padding: 20px;
+        line-height: 0px;
+      }
+    }
+  }
+}
+
+// Search
+.search {
+  text-align: center;
+  header {
+    margin-bottom: 10%;
+  }
+}
+
+a.join-us {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+.join-us-button {
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 0;
+  padding: 20px 35px;
+}
+
+// Add this
+
+#at4-share {
+  a.at4-share-btn {
+    background: #ccc !important; 
+    border-bottom: 1px solid #ddd;
+  }
+}

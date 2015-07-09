@@ -1,0 +1,146 @@
+/*=====================================================================================
+	STRUCTURE
+=======================================================================================*/
+#about { background-position: center center; background-repeat: no-repeat; .transition(left 0.15s ease-in-out); background-size: cover; }
+body.home {
+	#about #details .profile {
+		h1, h2 {
+			a:before { display: none; }
+		}
+	}
+}
+
+#details { .x(37%, 100vh); .box; text-align: center; text-shadow: 0 1px 1px rgba(0,0,0,0.3); color: #fff; .transition; display: table-cell; vertical-align: middle;
+	> * { display: inline-block; width: 100%; }
+	.profile { padding: 0 30px; .box;
+		.avatar { .x(90px); .br(50px); margin-bottom: 20px; .transition; border: 5px solid rgba(0,0,0,0.1);
+			&:hover { .transform(scale, 1.2); }
+		}
+		h1, h2 { margin-bottom: 5px; font-size: 22px; color: inherit; line-height: 34px;
+			a { color: inherit; position: relative;
+				&:before { content: '\2190'; position: absolute; left: 0; font-size: 18px; font-weight: normal; font-family: @sansserif; .opacity(0); .transition; }
+				&:hover {
+					&:before { left: -30px; .opacity(1); }
+				}
+			}
+		}
+		p { color: rgba(255,255,255,0.8); font-size: 14px; line-height: 20px; letter-spacing: -0.035em;  }
+	}
+}
+
+/*=====================================================================================
+	NAVIGATION
+=======================================================================================*/
+#navigation { display: none; .x(100%, 100vh); padding: 100px 30px 15px 30px; .box; text-align: center; text-shadow: 0 1px 1px rgba(0,0,0,0.3); color: #fff; overflow-y: auto; max-height: 100vh;
+	.inner { display: table-cell; vertical-align: middle; width: 100vw; height: ~'calc(100vh - 115px)'; }
+	nav { width: 100%; display: inline-block;
+		ul {
+			li {
+				a { color: rgba(255,255,255,0.8); display: block; font-size: 16px; .transition; .br; line-height: 20px; padding: 20px 0;
+					&:hover { color: #fff; background: rgba(0,0,0,0.3); }
+				}
+			}
+		}
+	}
+	#search { display: inline-block; width: 100%; 
+		input { line-height: 20px; padding: 20px 0; text-align: center; height: 60px; background: transparent; border: 0; color: rgba(255,255,255,0.8); .bs(0 0 0 transparent); font-size: 16px;
+			&::-webkit-input-placeholder { color: rgba(255,255,255,0.8); }
+			&:-moz-placeholder, &::-moz-placeholder { color: rgba(255,255,255,0.8); }
+			&:-ms-input-placeholder { color: rgba(255,255,255,0.8); }
+			&:hover { background: rgba(0,0,0,0.3); color: #fff;
+				&::-webkit-input-placeholder { color: #fff; }
+				&:-moz-placeholder, &::-moz-placeholder { color: #fff; }
+				&:-ms-input-placeholder { color: #fff; }
+			}
+			&:focus { background: #fff; color: @basic;
+				&::-webkit-input-placeholder { color: @light; }
+				&:-moz-placeholder, &::-moz-placeholder { color: @light; }
+				&:-ms-input-placeholder { color: @light; }
+			}
+		}
+	}
+}
+nav.social { padding: 30px 30px 0 30px; margin-top: 30px; position: relative; .box;
+	&:before { .x(50px, 0); content: ''; display: block; top: 0; position: absolute; left: 50%; margin-left: -25px; border-top: 2px solid rgba(255,255,255,0.5); .bs(0 1px 1px rgba(0,0,0,0.05)); }
+	ul {
+		li { display: inline-block; margin: 0 2px; 
+			a { .x(32px); display: inline-block; text-indent: -9999em; text-align: left; .opacity(0.75); .transition; background-position: center center; background-repeat: no-repeat; -webkit-transform: translate3d(0, 0, 0);
+				&:hover { .opacity(1); .transform(scale, 1.2); }
+				&.ico-facebook { background: url('@{p}social/ico-facebook.svg'); }
+				&.ico-pinterest { background: url('@{p}social/ico-pinterest.svg'); }
+				&.ico-linkedin { background: url('@{p}social/ico-linkedin.svg'); }
+				&.ico-twitter { background: url('@{p}social/ico-twitter.svg'); }
+				&.ico-instagram { background: url('@{p}social/ico-instagram.svg'); }
+				&.ico-behance { background: url('@{p}social/ico-behance.svg'); }
+				&.ico-github { background: url('@{p}social/ico-github.svg'); }
+				&.ico-soundcloud { background: url('@{p}social/ico-soundcloud.svg'); }
+				&.ico-email { background: url('@{p}social/ico-email.svg'); }
+				&.ico-skype { background: url('@{p}social/ico-skype.svg'); }
+				&.ico-youtube { background: url('@{p}social/ico-youtube.svg'); }
+				&.ico-vimeo { background: url('@{p}social/ico-vimeo.svg'); }
+				&.ico-googleplus { background: url('@{p}social/ico-googleplus.svg'); }
+				&.ico-tumblr { background: url('@{p}social/ico-tumblr.svg'); }
+				&.ico-flickr { background: url('@{p}social/ico-flickr.svg'); }
+				&.ico-dribbble { background: url('@{p}social/ico-dribbble.svg'); }
+				&.ico-reddit { background: url('@{p}social/ico-reddit.svg'); }
+				&.ico-deviantart { background: url('@{p}social/ico-deviantart.svg'); }
+			}
+		}
+	}
+}
+
+nav.footer { position: absolute; bottom: 40px; left: 0; width: 100%; font-size: 12px; .nols;
+	ul {
+		li { display: inline-block; 
+			&:after { content: '\2219'; margin: 0 8px; color: rgba(255,255,255,0.25); }
+			&:last-child {
+				&:after { display: none; }
+			}
+			a { color: rgba(255,255,255,0.5); .transition(color 0.15s ease-in-out); 
+				&:hover { color: #fff; }
+			}
+		}
+	}
+}
+
+@navTriggerWidth: 30px; 
+@navTriggerHeight: 20px;
+
+.nav-trigger { position: absolute; top: 40px; z-index: 2; left: 50%; margin-left: @navTriggerWidth/-2; .x(@navTriggerWidth, @navTriggerHeight); line-height: 0;
+	.lines { position: relative; .x(@navTriggerWidth, @navTriggerHeight); display: block; .opacity(0.8); .transition; 
+		.line { .x(@navTriggerWidth, 4px); .br; background: #fff; display: block; position:absolute; left:0; line-height: 0; .transition; .bs(0 1px 1px rgba(0,0,0,0.3)); 
+			&.line-1 { top: 0; }
+			&.line-2 { top: 50%; }
+			&.line-3 { top: 100%; }
+		}
+	}
+	&:hover {
+		.lines { .opacity(1); }
+	}
+}
+#nav-trigger { position: absolute; left: -9999em; visibility: hidden; .opacity(0); 
+	&:checked {
+		+ .left-column { 
+			.cover { background: rgba(0,0,0,0.6); }
+			#navigation { display: inline-block; }
+			#details { display: none; }
+			.nav-trigger {
+				.lines {
+					.line { .bs(0 0 0 transparent);
+						&.line-1 {
+						    transform: translateY(@navTriggerHeight / 2) translateX(0) rotate(45deg);
+						    -webkit-transform: translateY(@navTriggerHeight / 2) translateX(0) rotate(45deg);
+						}
+					    &.line-2 {
+					    	opacity:0;
+					    }
+					    &.line-3 {
+					    	transform: translateY(@navTriggerHeight / 2 * -1) translateX(0) rotate(45deg * -1);
+							-webkit-transform: translateY(@navTriggerHeight / 2 * -1) translateX(0) rotate(45deg * -1);
+					    }
+					}
+				}
+			}
+		}
+	}
+}

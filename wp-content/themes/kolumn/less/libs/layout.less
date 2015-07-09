@@ -1,0 +1,43 @@
+/*=====================================================================================
+	LAYOUT
+=======================================================================================*/
+.container { width: @containerWidth; margin: 0 auto; position: relative;
+	&:after { .cl; }
+}
+#main { min-height: 100vh; background: rgba(200,194,202,0.1);
+	&:after { .cl; }
+	.left-column { .left; width: 37%; .box; position: fixed; left: 0; top: 0; bottom: 0; z-index: 5;
+		> .cover { background: rgba(0,0,0,0.3); .transition(background 0.15s ease-in-out); .box; min-height: 100%; }
+	}
+	.right-column { .right; width: 100%; .box; padding-left: 37%; position: relative; background: @bg;
+		> .inner { width: 100%; .box; max-width: 750px; margin: 0 auto; padding: 60px 75px; }
+		#comments {
+			> .inner { padding: 40px 75px; max-width: 750px; margin: 0 auto; width: 100%; .box; }
+		}
+	}
+}
+
+body {
+	&.search-results, &.archive {
+		#main {
+			.right-column { padding-top: 80px; }
+		}
+	}
+	&.error404 {
+		#main {
+			.right-column {
+				> .inner { text-align: center;
+					p { margin-bottom: 20px; }
+				}
+			}
+		}
+	}
+}
+
+footer#footer { background: rgba(200,194,202,0.1); border-top: 1px solid rgba(200,194,202,0.3); clear: both; font-size: 12px; .nols; color: fadeout(@light, 20%); padding-top: 0;
+	&:after { .cl; }
+	> .inner { width: 100%; .box; max-width: 750px; margin: 0 auto; padding: 50px 75px 80px 75px; line-height: 32px; }
+	.rct { .x(28px, 32px); display: inline-block; text-indent: -9999em; background: url('@{p}logo-rc.svg'); .opacity(0.2); margin-left: 2px; .transition; 
+		&:hover { .opacity(1); }
+	}
+}

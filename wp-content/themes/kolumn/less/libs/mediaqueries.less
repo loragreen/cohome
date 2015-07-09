@@ -1,0 +1,135 @@
+/*=====================================================================================
+	MEDIA QUERIES
+=======================================================================================*/
+@media only screen and (max-width: 800px) { 
+	#main {
+		.left-column { width: 80%; left: -70%;
+			#navigation, #details { display: none; max-height: auto; }
+			.nav-trigger { left: auto; right: 10%; margin-right: -40px; position: absolute; .transition; }
+		}
+		.right-column { padding-left: 10%; 
+			.fixed-header { left: 10%; }
+		}
+	}
+	#nav-trigger {
+		&:checked {
+			+ .left-column { left: 0;
+				.cover { overflow-y: auto; max-height: 100%; }
+				#navigation { display: block; overflow-y: visible; height: auto; padding: 20px 60px; max-height: auto; 
+					.inner { height: auto; }
+				}
+				#details { display: block; padding: 20px 60px; position: relative; width: 100%; height: auto;
+					&:before { .x(50px, 0); content: ''; display: block; top: 0; position: absolute; left: 50%; margin-left: -25px; border-top: 2px solid rgba(255,255,255,0.5); .bs(0 1px 1px rgba(0,0,0,0.05)); }
+					.profile { padding: 0; }
+					nav.social { padding: 20px 0 0 0; }
+					nav.footer { position: static; padding-top: 20px; margin-top: 20px; position: relative; bottom: 0;
+						&:before { .x(50px, 0); content: ''; display: block; top: 0; position: absolute; left: 50%; margin-left: -25px; border-top: 2px solid rgba(255,255,255,0.5); .bs(0 1px 1px rgba(0,0,0,0.05)); }
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	#content > #disqus_thread { padding: 20px; }
+	#main {
+		.left-column { width: 0; left: -100%;
+			.nav-trigger { top: 5px; right: 5px; left: auto; margin-left: 0; margin-right: 0; .transform(scale, 0.8); position: fixed; background: rgba(255,255,255,0.9); .x(30px, 24px); .br(4px); padding: 10px; .bs(0 1px 2px rgba(0,0,0,0.3)); 
+				.lines {
+					.line { background: @dark; .bs(0 1px 1px #fff); }
+				}
+			}
+			#navigation, #details { display: none; }
+		}
+		.right-column { padding-left: 0;
+			> .inner { padding: 20px; max-width: auto; }
+			#comments {
+				> .inner { padding: 20px; max-height: auto; }
+			}
+			.fixed-header { left: 0;
+				h1 { font-size: 24px; line-height: 60px; }
+			}
+		}
+	}
+	#nav-trigger {
+		&:checked {
+			+ .left-column { width: 80%; left: 0;
+				#navigation { display: block; padding: 20px; }
+				#details { display: block; padding: 20px; position: relative;
+					&:before { .x(50px, 0); content: ''; display: block; top: 0; position: absolute; left: 50%; margin-left: -25px; border-top: 2px solid rgba(255,255,255,0.5); .bs(0 1px 1px rgba(0,0,0,0.05)); }
+					nav.footer { position: static; padding-top: 20px; margin-top: 20px; position: relative; bottom: 0;
+						&:before { .x(50px, 0); content: ''; display: block; top: 0; position: absolute; left: 50%; margin-left: -25px; border-top: 2px solid rgba(255,255,255,0.5); .bs(0 1px 1px rgba(0,0,0,0.05)); }
+					}
+				}
+			}
+		}
+	}
+	#navigation {
+		nav {
+			ul {
+				li {
+					a { padding: 10px; }
+				}
+			}
+		}
+		#search {
+			input { padding: 10px; height: 40px; }
+		}
+	}
+
+	.post {
+		.blockquote { .blockquote; padding-left: 0; }
+		&.format-quote .post-body { padding-left: 0; }
+		.pulled {
+			&.right { margin-right: -10px; padding: 20px 0 20px 20px; }
+			&.left { margin-left: -10px; padding: 20px 20px 20px 0; }
+		}
+		> footer {
+			.social {
+				> * { margin-bottom: 10px; 
+					&:last-child { margin-bottom: 0; }
+				}
+			}
+		}
+		.single-gallery {
+			li { .x(130px); }
+		}
+		&.sticky {
+			> header {
+				h1, h2 { position: relative; margin-left: 40px; }
+			}
+		}
+	}
+
+	#comments { background: rgba(200,194,202,0.05); border-top: 1px solid rgba(200,194,202,0.3); clear: both;
+		.inner {
+			h2 { margin-bottom: 20px; }
+		}
+		#comments-list { 
+			li { 
+				ol {
+					li { padding-left: 35px; background: url('@{p}ico-reply.svg') 0 14px no-repeat; }
+				}
+			}
+		}
+	}
+
+	#add-comment {
+		input { padding: 0 10px; }
+		textarea { padding: 10px; }
+	}
+
+	body { padding-top: 24px; 
+		&.search-results {
+			#main {
+				.right-column { padding-top: 40px; }
+			}
+		}
+	}
+	footer#footer { text-align: center; 
+		.inner { padding: 30px 20px; 
+			.left, .right { .nofloat; }
+		}
+	}
+}

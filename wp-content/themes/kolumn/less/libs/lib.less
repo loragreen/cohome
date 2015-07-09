@@ -1,0 +1,146 @@
+/*=====================================================================================
+  BASIC CLASSES
+=======================================================================================*/
+.green { color: @green; }
+.red { color: @red; }
+
+.hidden { display: none; }
+.invisible { .opacity(0); }
+.visible { .opacity(1); }
+.nowrap { white-space: nowrap; }
+.nols { letter-spacing: 0; }
+
+.cl { content: '.'; display: block; height: 0; clear: both; visibility: hidden; font-size: 0; }
+.left { float: left; }
+.right { float: right; }
+.nofloat { float: none; }
+.cols:after { .cl; }
+
+.alignleft { .left; margin: 0 30px 30px 0; }
+.alignright { .right; margin: 0 0 30px 30px; }
+.aligncenter { margin: 0 auto 30px auto; display: block; }
+.small { color: @light; font-size: 12px; }
+.ellipsis { overflow: hidden; .nowrap; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+
+/*=====================================================================================
+  RESET
+=======================================================================================*/
+a, abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, date, tr, ul, var, video { margin: 0; padding: 0; border: 0; font-size: 100%; vertical-align: baseline; }
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+a, ins, del { text-decoration: none; }
+blockquote, q { quotes:none; }
+ul, ol { list-style: none; }
+table { border-spacing: 0; border-collapse: collapse; }
+caption, th { text-align: left; }
+blockquote:before, blockquote:after, q:after, q:before { content: ''; }
+* { font-weight: normal; }
+/*=====================================================================================
+  BASIC STYLES
+=======================================================================================*/
+html { overflow-x: hidden; -webkit-text-size-adjust: 100%; }
+body { background: @bg; color: @basic; font-family: @sansserif; font-size: 16px; letter-spacing: -0.035em; overflow-x: hidden; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+hr { background: rgba(0,0,0,0.15); height: 1px; border: 0 !important; width: 50px; .left; clear: both; margin-bottom: 50px; margin-top: 30px; }
+b, strong { font-weight: bold; }
+em { font-style: italic; }
+del { text-decoration: line-through; }
+address, cite, dfn { font-style: normal; }
+abbr, acronym { border-bottom: 1px dotted #999; cursor: help; }
+img { vertical-align: middle; }
+a, a:visited { color: @accent; text-decoration: none; font: inherit; }
+a:active { color: darken(@accent, 15%); outline: 0; text-decoration: none; }
+a:hover { color: darken(@accent, 10%); text-decoration: none; }
+small { .small; }
+::-moz-selection { background: @accent; color: #fff; text-shadow: none; }
+::selection { background: @accent; color: #fff; text-shadow: none; }
+
+h1, h2, h3 { font-family: @serif; font-weight: bold; font-style: normal; letter-spacing: -0.05em; color: @dark; }
+h4, h5, h6 { font-weight: bold; }
+h1 { font-size: 32px; line-height: 34px; }
+h2 { font-size: 28px;
+  a { color: @dark; }
+}
+h3 { font-size: 24px; }
+h4 { font-size: 18px; }
+h5 { font-size: 16px; text-transform: uppercase; font-weight: normal; }
+h6 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; color: @light; }
+
+
+
+/*=====================================================================================
+  BUTTONS
+=======================================================================================*/
+.btn { display: inline-block; height: 40px; line-height: 40px; .br; text-align: center; border: 1px solid @border; background: transparent; padding: 0 30px; margin: 0; cursor: pointer; .box; .transition; outline: none; font-weight: bold; text-shadow: 0 1px 2px rgba(0,0,0,0.25); 
+  &:hover { text-decoration: none; }
+}
+/* colors */
+.btn-accent { background: @accent; color: #fff; border: 0;
+  &:visited { color: #fff; }
+  &:hover, &:focus { background: darken(@accent, 5%); }
+  &:active { background: darken(@accent, 10%); }
+}
+.btn-red { background: @red; color: #fff; border: 0;
+  &:visited { color: #fff; }
+  &:hover, &:focus { background: darken(@red, 5%); }
+  &:active { background: darken(@red, 10%); }
+}
+.btn-orange { background: @orange; color: #fff; border: 0;
+  &:visited { color: #fff; }
+  &:hover, &:focus { background: darken(@orange, 5%); }
+  &:active { background: darken(@orange, 10%); }
+}
+.btn-dark-grey { background: @basic; color: #fff; border: 0;
+  &:visited { color: #fff; }
+  &:hover, &:focus { background: @dark; }
+  &:active { background: #000; }
+}
+.btn-light-grey { background: rgba(0,0,0,0.05); color: @basic; border: 0; text-shadow: 0 0 0 transparent;
+  &:visited { color: @basic; }
+  &:hover, &:focus { background: rgba(0,0,0,0.1); }
+  &:active { background: rgba(0,0,0,0.2); }
+}
+.btn-green { background: @green; color: #fff; border: 0;
+  &:visited { color: #fff; }
+  &:hover, &:focus { background: darken(@green, 5%); }
+  &:active { background: darken(@green, 10%); }
+}
+.btn-bordered { color: @light; border: 1px solid rgba(0,0,0,0.1); text-shadow: 0 0 0 transparent; font-size: 13px; font-weight: normal; line-height: 39px;
+  &:visited { color: @light; }
+  &:hover, &:focus { background: rgba(0,0,0,0.05); color: @basic; }
+  &:active { background: rgba(0,0,0,0.1); }
+}
+
+.btn-big { height: 60px; line-height: 60px; font-size: 20px; }
+.btn-small { height: 34px; line-height: 34px; font-size: 15px; }
+.btn-tiny { height: 25px; line-height: 25px; font-size: 13px; }
+
+/* attr */
+.btn-disabled, &[disabled=disabled] { .opacity(0.5); cursor: default; }
+
+
+/*=====================================================================================
+  FORMS
+=======================================================================================*/
+input, textarea, button, select { font-family: @sansserif; font-size: 14px; }
+input[type=search] { -webkit-appearance: textfield; -moz-appearance: textfield; appearance: textfield;
+  &::-webkit-search-decoration { -webkit-appearance: none; }
+  &::-webkit-search-cancel-button { -webkit-appearance: none; }
+}
+
+input[type="text"], input[type="search"], input[type="date"], input[type="time"], input[type="password"], input[type="email"], input[type="url"], input[type="phone"], textarea { height: 40px; width: 100%; padding: 9px 20px; border: 1px solid #DDDDDD; .br; .box; .transition; background: rgba(255,255,255,0.7); margin: 0;
+  &:focus { background: #fff; outline: none; .bs(inset 0 1px 1px rgba(0,0,0,0.1)); border-color: @accent; }
+}
+textarea { height: 120px; width: 100% !important; }
+
+form {
+  li, p { margin-bottom: 10px; 
+    label { font-weight: bold; font-size: 12px; text-transform: uppercase; display: block; }
+  }
+}
+
+/* buttons */
+button[type="submit"], input[type="button"], input[type="reset"], input[type="submit"] { .btn; .btn-accent; }
+button[type="submit"], input[type="button"], input[type="reset"], input[type="submit"], select, label[for] { cursor: pointer; -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* deafult select */
+select { height: 40px; line-height: 30px; .box; margin: 0; padding: 5px 0; border: 1px solid lighten(@border, 20%); border-bottom-color: lighten(@border, 10%); font-size: 16px; .br; background: #fff; }

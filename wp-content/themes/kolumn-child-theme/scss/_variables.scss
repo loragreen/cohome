@@ -1,0 +1,29 @@
+$blue: #09A298;
+$orange: #EE4E44;
+$orange_rgb: 238, 78, 68;
+$main-font: Arial;
+$titles-color: black;
+$links-color: $blue;
+
+// Responsive
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+// Mixins
+@mixin transition($property, $duration, $effect) {
+  -webkit-transition: $property $duration $effect;
+  -moz-transition: $property $duration $effect;
+  -o-transition: $property $duration $effect;
+  transition: $property $duration $effect;
+}
+
+@mixin filter($name, $value) {
+  filter: $name + "(" + $value + ")";
+  -webkit-filter: $name + "(" + $value + ")";
+  -moz-filter: $name + "(" + $value + ")";
+  -ms-filter: $name + "(" + $value + ")";
+  -o-filter: $name + "(" + $value + ")";
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha" + $value + "=" + $value;
+}
