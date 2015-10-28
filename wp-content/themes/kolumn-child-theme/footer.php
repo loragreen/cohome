@@ -25,7 +25,7 @@
 		      </p>
 
 		      <p class="text-center">
-		      	Nous te contacterons très bientôt pour te rencontrer individuellement et te donner accès au profil de nos membres !
+		      	Nous allons traîter ta demande et t'envoyer un mail qui te permettra d'accéder aux profils de la communauté des CoHomers !
 		      </p>
 
 

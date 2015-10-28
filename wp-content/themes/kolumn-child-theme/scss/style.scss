@@ -178,6 +178,7 @@
           text-align: center;
           margin-bottom: 25px;
           .filter-button {
+            margin-bottom: 5px;
             &.selected {
               background-color: $blue;
               color: white;
@@ -330,10 +331,19 @@
   }
 
   .newsletter a {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 1);
     font-size: 0.8em;
   }
+
+  .social ul li {
+    margin: 0 4px;
+  }
+
+  .social ul li a {
+    transform: scale(1.1);
+  }
 }
+
 
 // To be moved
 .last {
@@ -452,5 +462,53 @@ a.join-us {
   a.at4-share-btn {
     background: #ccc !important; 
     border-bottom: 1px solid #ddd;
+  }
+}
+
+// Home video opacity on hover
+#videoOverlay:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  @include transition(all, 0.3s, ease-out);
+}
+
+// Cohome Presentation Page http://www.cohome.in/2015/05/11/cohome/#.VZ_sB7f21FT
+
+@media (min-width: $screen-md) {
+  #post-34 {
+    margin: auto -80px;
+    .icons-boxes {
+      p {
+        font-size: 19px;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  #post-34 .inner-box {
+    padding-bottom: 20px;
+  }
+}
+
+.cohome-presentation {
+  @media (min-width: $screen-md) {
+    margin-top: 70px;
+  }
+  margin-top: 40px;
+}
+
+// Social icons
+nav.social ul li a {
+  opacity: 1;
+}
+nav.social ul li a.ico-meetup {
+  //background: transparent url("../images/social/ico-meetup.svg") repeat scroll 0% 0%;
+  text-indent: inherit;
+  &:hover {
+    opacity: 0.8;
+  }
+  img {
+    height: 32px;
   }
 }

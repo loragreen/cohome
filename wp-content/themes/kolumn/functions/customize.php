@@ -289,6 +289,14 @@ function kolumn_customizer( $wp_customize ) {
         'type' => 'text'
     ));
 
+    /* Meetup */
+    $wp_customize->add_setting('meetup', array('default' => ''));
+    $wp_customize->add_control('meetup', array(
+        'label' => __( 'Meetup profile URL', 'kolumnthemechild' ),
+        'section' => 'social',
+        'type' => 'text'
+    ));
+
 
 
     if ( $wp_customize->is_preview() && ! is_admin() ) {

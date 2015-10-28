@@ -10,7 +10,7 @@ $(document).ready(function(){
 
   var grid = $("#grid");
 
-  imagesLoaded( grid, function() {
+  grid.imagesLoaded(function(){
     grid.isotope({
       itemSelector:'.grid-item'
     });
@@ -64,5 +64,17 @@ $(document).ready(function(){
       }
       ga('send', 'event', user, 'send form', location.toString());
   });
+
+  // Home video player with custom and nice overlay
+
+  $("#videoOverlay").bind("click", function(){
+    $(this).fadeOut('slow');         
+    $(this).promise().done(function(){
+      videoUrl = $(this).attr("data-video-src");           
+      $("#video").attr("src", videoUrl)         
+      $("#videoIFrame").toggleClass('hidden');  
+
+    });
+  });       
 
 });

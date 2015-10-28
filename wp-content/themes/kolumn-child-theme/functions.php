@@ -1,5 +1,7 @@
 <?php // Opening PHP tag - nothing should be before this, not even whitespace
 
+include "functions/customize.php";
+
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
@@ -27,4 +29,3 @@ register_sidebar(array('name'=>'Home Sidebar',
 'after_title' => '</h3>',
 ));
 
-// Post format for restricted profiles

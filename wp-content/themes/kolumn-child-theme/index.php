@@ -54,7 +54,7 @@
       $categories = get_categories(
         array(
           'hide_empty' => 1,
-          'exclude' => '6, 1',
+          'exclude' => '6, 1, 3',
           'orderby' => 'name'
           )
         );
@@ -108,7 +108,7 @@
     
   </section>
 
-  <?php get_template_part('pagination'); ?>
+  <?php // get_template_part('pagination'); ?>
 
 
   <div class="separator"></div>
